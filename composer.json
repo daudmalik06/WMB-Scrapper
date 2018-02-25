@@ -1,0 +1,22 @@
+{
+    "name": "dawood/WMBScrapper",
+    "description": "",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["shell","php","wayBackMachine","archive.org","snapshots"],
+    "authors": [
+        {
+            "name": "Dawood Ikhlaq",
+            "email": "daudmalik06@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "dawood\\WBMScrapper\\": "src/"
+        }
+    },
+    "require" : {
+        "php" : "^7.0"
+    }
+}
