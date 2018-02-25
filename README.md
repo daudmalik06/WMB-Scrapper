@@ -3,9 +3,9 @@
 
 =========================================  
 
-[![Latest Stable Version](https://poser.pugx.org/dawood/WMB-Scrapper/v/stable.svg)](https://packagist.org/packages/dawood/WMB-Scrapper)
-[![Total Downloads](https://poser.pugx.org/dawood/WMB-Scrapper/downloads)](https://packagist.org/packages/dawood/WMB-Scrapper)
-[![License](https://poser.pugx.org/dawood/WMB-Scrapper/license.svg)](https://packagist.org/packages/dawood/WMB-Scrapper)
+[![Latest Stable Version](https://poser.pugx.org/dawood/wmb-scrapper/v/stable.svg)](https://packagist.org/packages/dawood/wmb-scrapper)
+[![Total Downloads](https://poser.pugx.org/dawood/wmb-scrapper/downloads)](https://packagist.org/packages/dawood/wmb-scrapper)
+[![License](https://poser.pugx.org/dawood/wmb-scrapper/license.svg)](https://packagist.org/packages/dawood/wmb-scrapper)
 
 ## Introduction
 A small Php package to fetch archive url snapshots from archive.org.  
@@ -20,7 +20,7 @@ complete list of all years possible.
 Install the package through [composer](http://getcomposer.org):
 
 ```
-composer require dawood/WMBScrapper
+composer require dawood/wmb-scrapper
 ```
 
 Make sure, that you include the composer [autoloader](https://getcomposer.org/doc/01-basic-usage.md#autoloading)
