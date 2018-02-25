@@ -2,9 +2,9 @@
 
 =========================================  
 
-[![Latest Stable Version](https://poser.pugx.org/dawood/phpchromepdf/v/stable.svg)](https://packagist.org/packages/dawood/phpchromepdf)
-[![Total Downloads](https://poser.pugx.org/dawood/phpchromepdf/downloads)](https://packagist.org/packages/dawood/phpchromepdf)
-[![License](https://poser.pugx.org/dawood/phpchromepdf/license.svg)](https://packagist.org/packages/dawood/phpchromepdf)
+[![Latest Stable Version](https://poser.pugx.org/dawood/WMB-Scrapper/v/stable.svg)](https://packagist.org/packages/dawood/WMB-Scrapper)
+[![Total Downloads](https://poser.pugx.org/dawood/WMB-Scrapper/downloads)](https://packagist.org/packages/dawood/WMB-Scrapper)
+[![License](https://poser.pugx.org/dawood/WMB-Scrapper/license.svg)](https://packagist.org/packages/dawood/WMB-Scrapper)
 
 ## Introduction
 A small Php package to fetch archive url snapshots from archive.org.  
