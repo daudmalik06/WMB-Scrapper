@@ -15,8 +15,5 @@
         "psr-4": {
             "dawood\\WBMScrapper\\": "src/"
         }
-    },
-    "require" : {
-        "php" : "^7.0"
     }
 }

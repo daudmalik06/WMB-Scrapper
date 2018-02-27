@@ -10,7 +10,7 @@ class WBMScrapper
      * @param string $url
      * @return array
      */
-    public static function getAllSnapShotUrls(string $url) : array
+    public static function getAllSnapShotUrls($url)
     {
         $firstYear = self::firstSnapshotYear($url);
         $lastYear = self::lastSnapshotYear($url);
@@ -30,7 +30,7 @@ class WBMScrapper
      * @param int $year
      * @return array
      */
-    public static function getSnapShotUrlsOfYear(string $url, int $year) : array
+    public static function getSnapShotUrlsOfYear($url, $year)
     {
         $scrapper = new self;
         $snapShotAddress = 'https://web.archive.org/__wb/calendarcaptures?url='.urlencode($url).'&selected_year='.$year;
@@ -59,7 +59,7 @@ class WBMScrapper
      * @param string $url
      * @return int
      */
-    public static function firstSnapshotYear(string $url) : int
+    public static function firstSnapshotYear($url)
     {
         $scrapper = new self;
         return (int)$scrapper->getYears($url)['first'];
@@ -70,7 +70,7 @@ class WBMScrapper
      * @param $url
      * @return int
      */
-    public static function lastSnapshotYear($url) : int
+    public static function lastSnapshotYear($url)
     {
         $scrapper = new self;
         return (int)$scrapper->getYears($url)['last'];
@@ -80,7 +80,7 @@ class WBMScrapper
      * @param string $url
      * @return array
      */
-    private function getYears(string $url) : array
+    private function getYears($url)
     {
         $infoAddress = 'https://web.archive.org/__wb/sparkline?url='.urlencode($url).'&collection=web&output=json';
         $jsonResponse = file_get_contents($infoAddress);
@@ -96,7 +96,7 @@ class WBMScrapper
      * @param array $timestamps
      * @return array
      */
-    private function prepareWebArchiveUrlsFromArray(string $url, array $timestamps) : array
+    private function prepareWebArchiveUrlsFromArray($url, array $timestamps)
     {
         $webArchiveUrls = [];
         $webArchiveAddress = 'https://web.archive.org/web/TIME_STAMP/'.$url;
