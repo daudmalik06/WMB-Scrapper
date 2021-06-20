@@ -34,7 +34,12 @@ class WBMScrapper
     {
         $scrapper = new self;
         $snapShotAddress = 'https://web.archive.org/__wb/calendarcaptures?url='.urlencode($url).'&selected_year='.$year;
-        $response = file_get_contents($snapShotAddress);
+        //doesn't work without referer
+        $options = [
+            'http' => ['header' => "referer: https://web.archive.org"],
+        ];
+        $context = stream_context_create($options);
+        $response = file_get_contents($snapShotAddress, false, $context);
         preg_match_all('/"ts":\[(.*?)\]/',$response, $timestamps);
         $finalTimestamps = [];
         foreach ($timestamps[1] as $timestamp)
@@ -83,7 +88,12 @@ class WBMScrapper
     private function getYears($url)
     {
         $infoAddress = 'https://web.archive.org/__wb/sparkline?url='.urlencode($url).'&collection=web&output=json';
-        $jsonResponse = file_get_contents($infoAddress);
+        //doesn't work without referer
+        $options = [
+            'http' => ['header' => "referer: https://web.archive.org"],
+        ];
+        $context = stream_context_create($options);
+        $jsonResponse = file_get_contents($infoAddress, false, $context);
         $jsonResponse= json_decode($jsonResponse, true);
         return [
             'first' => substr($jsonResponse['first_ts'], 0 ,4),
